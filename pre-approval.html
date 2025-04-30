@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Pre-Approved | The Simple Salesman</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="top-banner">
+  <div class="banner-content">
+    <div class="logo-container">
+      <a href="index.html" class="home-link">
+        <img src="C:\Users\ShAllan\Documents\shawns site\images\Headshot.jpg" alt="Simple Salesman Logo" class="site-logo">
+        <h1 class="logo">The Simple Salesman</h1>
+      </a>
+    </div>
+    <nav class="nav-buttons">
+      <a href="inventory.html" class="nav-button">Inventory</a>
+      <a href="pre-approval.html" class="nav-button highlight-button">Pre-Approval</a>
+      <a href="trade.html" class="nav-button">Trade</a>
+      <a href="happy-customers.html" class="nav-button">Happy Customers</a>
+      <a href="contact.html" class="nav-button">Contact Us</a>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- Pre-Approval Hero Section -->
+  <section class="pre-approval-hero">
+    <div class="hero-content">
+      <h2>Get Pre-Approved in Minutes</h2>
+      <p>Start your car buying journey today—no hard credit check required!</p>
+    </div>
+  </section>
+
+  <!-- Pre-Approval Form -->
+  <main class="pre-approval-container">
+    <form class="pre-approval-form" id="preApprovalForm">
+      <h3>Basic Information</h3>
+      <div class="form-group">
+        <label for="full-name">Full Name*</label>
+        <input type="text" id="full-name" name="full_name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number*</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <h3>Vehicle Preferences</h3>
+      <div class="form-group">
+        <label for="vehicle-type">I'm Interested In*</label>
+        <select id="vehicle-type" name="vehicle_type" required>
+          <option value="" disabled selected>Select vehicle type</option>
+          <option value="truck">Truck (F-150, etc.)</option>
+          <option value="suv">SUV (Explorer, etc.)</option>
+          <option value="car">Car (Mustang, etc.)</option>
+          <option value="no-preference">No Preference - Just Exploring</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="price-range">Target Price Range*</label>
+        <select id="price-range" name="price_range" required>
+          <option value="" disabled selected>Select price range</option>
+          <option value="under-25k">Under $25,000</option>
+          <option value="25k-35k">$25,000 - $35,000</option>
+          <option value="35k-50k">$35,000 - $50,000</option>
+          <option value="over-50k">Over $50,000</option>
+        </select>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="contact-consent" name="contact_consent" required>
+        <label for="contact-consent">I agree to be contacted by The Simple Salesman about vehicle options*</label>
+      </div>
+
+      <div class="form-group checkbox-group">
+        <input type="checkbox" id="newsletter" name="newsletter">
+        <label for="newsletter">Send me special offers and new inventory updates</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Get My Pre-Approval</button>
+
+      <div class="disclaimer">
+        <p><small>This is not a credit application or guarantee of financing. A dealership representative will contact you to discuss options. Final approval requires additional information and credit review at the dealership.</small></p>
+      </div>
+    </form>
+
+    <div class="benefits-sidebar">
+      <h3>Why Get Pre-Approved?</h3>
+      <ul>
+        <li><i class="fas fa-check-circle"></i> <strong>No credit impact</strong> - This form doesn't pull your credit</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Better negotiation</strong> - Know your budget before you shop</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Priority service</strong> - Skip lines at the dealership</li>
+        <li><i class="fas fa-check-circle"></i> <strong>Personalized matches</strong> - We'll find vehicles in your range</li>
+      </ul>
+    </div>
+  </main>
+
+<footer class="bottom-banner">
+  <div class="footer-content">
+    <div class="contact-info">
+      <h3>How to Reach Me</h3>
+      <p><i class="fas fa-phone"></i> (832) 708-4243</p>
+      <p><i class="fas fa-envelope"></i> Allan.t.Shawn@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i>Address: 10333 Katy Fwy, Houston, TX 77024</p>
+    </div>
+    <div class="social-media">
+      <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; 2023 Simple Salesman. All rights reserved.</p>
+  </div>
+</footer>
+
+  <script>
+    // Simple form handler (would connect to your CRM in production)
+    document.getElementById('preApprovalForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("Thanks! A representative will contact you shortly to discuss your pre-approval options.");
+      this.reset();
+    });
+  </script>
+</body>
+</html>

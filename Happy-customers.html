@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Customers | Simple Salesman</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="See our happy customers with their new vehicles from Simple Salesman.">
+</head>
+<body>
+  <!-- Header -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <div class="logo-container">
+        <a href="index.html" class="home-link">
+          <img src="images/Headshot.jpg" alt="Simple Salesman Logo" class="site-logo">
+          <h1 class="logo">The Simple Salesman</h1>
+        </a>
+      </div>
+      <nav class="nav-buttons">
+        <a href="inventory.html" class="nav-button">Inventory</a>
+        <a href="pre-approval.html" class="nav-button highlight-button">Pre-Approval</a>
+        <a href="trade.html" class="nav-button">Trade</a>
+        <a href="happy-customers.html" class="nav-button active">Happy Customers</a>
+        <a href="contact.html" class="nav-button">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="customer-hero">
+      <div class="hero-content">
+        <h2>Our Happy Customers</h2>
+        <p>Smiles and new vehicles</p>
+      </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="image-gallery">
+      <div class="gallery-grid" id="image-grid">
+        <!-- Images will load here -->
+        <div class="loading-spinner">
+          <i class="fas fa-spinner fa-spin"></i>
+          <p>Loading customer photos...</p>
+        </div>
+      </div>
+
+      <div class="pagination">
+        <button id="prev-btn" disabled><i class="fas fa-chevron-left"></i> Previous</button>
+        <span id="page-indicator">Page 1</span>
+        <button id="next-btn">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="customer-cta">
+      <h2>Ready to Be Our Next Happy Customer?</h2>
+      <a href="contact.html" class="cta-button">Get Started Today</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bottom-banner">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>How to Reach Me</h3>
+        <p><i class="fas fa-phone"></i> (832) 708-4243</p>
+        <p><i class="fas fa-envelope"></i> Allan.t.Shawn@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 10333 Katy Fwy, Houston, TX 77024</p>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Simple Salesman. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+<script>
+    // Customer image data - replace with your actual image paths
+    const customerImages = [
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer1.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer2.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer3.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer4.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer5.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer6.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer7.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer8.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer9.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer10.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer11.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer12.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer13.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer14.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer15.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer16.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer17.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer18.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer19.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer20.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer21.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer22.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer23.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer24.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer25.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer26.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer27.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer28.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer29.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer30.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer31.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer32.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer33.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer34.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer35.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer36.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer37.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer38.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer39.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer40.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer41.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer42.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer43.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer44.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer45.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer46.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer47.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer48.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer49.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer50.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer51.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer52.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer53.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer54.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer55.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer56.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer57.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer58.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer59.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer60.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer61.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer62.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer63.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer64.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer65.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer66.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer67.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer68.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer69.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer70.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer71.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer72.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer73.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer74.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer75.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer76.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer77.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer78.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer79.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer80.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer81.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer82.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer83.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer84.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer85.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer86.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer87.jpg",
+        "C:\\Users\\ShAllan\\Documents\\shawns site\\images\\Customers\\Customer88.jpg"
+
+      // Add more images as needed...
+    ];
+
+    // Configuration
+    const IMAGES_PER_PAGE = 15; // 3 images x 5 rows
+    let currentPage = 1;
+    const imageGrid = document.getElementById("image-grid");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+    const pageIndicator = document.getElementById("page-indicator");
+
+    // Display images for current page
+    function displayImages() {
+      imageGrid.innerHTML = '';
+      const startIndex = (currentPage - 1) * IMAGES_PER_PAGE;
+      const endIndex = Math.min(startIndex + IMAGES_PER_PAGE, customerImages.length);
+      
+      for (let i = startIndex; i < endIndex; i++) {
+        const imgContainer = document.createElement("div");
+        imgContainer.className = "gallery-item";
+        
+        const img = document.createElement("img");
+        img.src = customerImages[i];
+        img.alt = "Happy customer with their new vehicle";
+        img.loading = "lazy";
+        
+        imgContainer.appendChild(img);
+        imageGrid.appendChild(imgContainer);
+      }
+      
+      updatePaginationControls();
+    }
+
+    // Update pagination controls
+    function updatePaginationControls() {
+      const totalPages = Math.ceil(customerImages.length / IMAGES_PER_PAGE);
+      
+      prevBtn.disabled = currentPage === 1;
+      nextBtn.disabled = currentPage === totalPages || totalPages === 0;
+      pageIndicator.textContent = `Page ${currentPage} of ${totalPages}`;
+    }
+
+    // Event listeners
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        displayImages();
+      }
+    });
+
+    nextBtn.addEventListener("click", () => {
+      const totalPages = Math.ceil(customerImages.length / IMAGES_PER_PAGE);
+      if (currentPage < totalPages) {
+        currentPage++;
+        displayImages();
+      }
+    });
+
+    // Initialize
+    displayImages();
+  </script>
+</body>
+</html>
