@@ -161,5 +161,35 @@
         this.checked ? 'block' : 'none';
     });
   </script>
+<script>
+document.querySelector('.trade-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const formData = new FormData(form);
+  const urlParams = new URLSearchParams(formData);
+  
+  try {
+    const response = await fetch('YOUR_SCRIPT_URL', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: urlParams
+    });
+    
+    const result = await response.json();
+    
+    if (result.status === "success") {
+      window.location.href = '/thank-you.html'; // Or your success page
+    } else {
+      throw new Error(result.message || 'Submission failed');
+    }
+  } catch(error) {
+    console.error('Error:', error);
+    alert('There was an error submitting your form. Please try again.');
+  }
+});
+</script>
 </body>
 </html>
