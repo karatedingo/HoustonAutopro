@@ -37,7 +37,8 @@
     </section>
 
 <div class="contact-container">
-  <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpbgFTOWDVKL1bq9r8R3ycKN1q0krF38OTBGArM5mv_3YHaAZCjGnhNMEZoTZbL3kL/exec" method="POST" enctype="application/json">
+  <form class="contact-form" action="https://script.google.com/macros/s/AKfycbwpbgFTOWDVKL1bq9r8R3ycKN1q0krF38OTBGArM5mv_3YHaAZCjGnhNMEZoTZbL3kL/exec" method="POST">
+    <!-- Remove enctype="application/json" -->
     <input type="hidden" name="redirect" value="https://yourwebsite.com/thank-you.html">
     
     <div class="form-group">
@@ -64,9 +65,9 @@
           <textarea id="comments" name="comments" rows="4"></textarea>
         </div>
 
-        <button type="submit" class="submit-btn">Submit Inquiry</button>
-      </form>
-
+    <button type="submit" class="submit-btn">Submit Inquiry</button>
+  </form>
+</div>
       <div class="contact-info">
         <h3>Other Ways to Reach Us</h3>
         <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (832) 708-4243</p>
