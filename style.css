@@ -386,7 +386,7 @@ body {
 
 .form-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, .75fr);
   gap: 0.8rem;
   margin-bottom: 0.8rem;
 }
