@@ -34,7 +34,11 @@
       <p>Complete this form for a free, no-obligation valuation of your vehicle</p>
     </section>
 
-    <form class="trade-form">
+    <form class="trade-form"
+            action="https://script.google.com/macros/s/AKfycbz2pYcbAHomvC6V8qwrMBZm_hhSJJjasSLJH-1VPBmHfQSuv_xZZFtoIacwIIdmyRd2/exec" 
+      method="POST"
+      onsubmit="setTimeout(function(){ window.location.href='https://houstonautopro.com/thank-you.html'; }, 1000); return true;">
+>
       <h3>Vehicle Information</h3>
       
       <div class="form-grid">
@@ -160,36 +164,5 @@
       document.getElementById('finance-details').style.display = 
         this.checked ? 'block' : 'none';
     });
-  </script>
-<script>
-document.querySelector('.trade-form').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  
-  const form = e.target;
-  const formData = new FormData(form);
-  const urlParams = new URLSearchParams(formData);
-  
-  try {
-    const response = await fetch('YOUR_SCRIPT_URL', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: urlParams
-    });
-    
-    const result = await response.json();
-    
-    if (result.status === "success") {
-      window.location.href = '/thank-you.html'; // Or your success page
-    } else {
-      throw new Error(result.message || 'Submission failed');
-    }
-  } catch(error) {
-    console.error('Error:', error);
-    alert('There was an error submitting your form. Please try again.');
-  }
-});
-</script>
 </body>
 </html>
