@@ -38,7 +38,7 @@
 
 <div class="contact-container">
 <form class="contact-form" 
-      action="https://script.google.com/macros/s/AKfycbzG0fqzA1ULi_4ZRXIo0gyEpg18jg5EKvPvbHttmMyiN-vGuFggORIrK4EHJQRiYwnO/exec" 
+      action="https://script.google.com/macros/s/AKfycbwPpPMa7jbKLr2qcbCqoskeIoiplPTwSIj9RiXyNh89ZLW7dTKu-ktzLujgE7JiZt2H/exec" 
       method="POST"
       onsubmit="setTimeout(function(){ window.location.href='https://houstonautopro.com/thank-you.html'; }, 1000); return true;">
 
@@ -118,5 +118,32 @@ Houston, TX 77024</p>
       this.reset();
     });
   </script>
+  <script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  try {
+    const formData = new URLSearchParams(new FormData(this));
+    
+    const response = await fetch('YOUR_NEW_SCRIPT_URL', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData
+    });
+    
+    if (!response.ok) throw new Error('Server error');
+    
+    const result = await response.json();
+    console.log("Submission result:", result);
+    window.location.href = 'https://houstonautopro.com/thank-you.html';
+    
+  } catch(error) {
+    console.error("Submission error:", error);
+    alert("Failed to submit form. Please try again or contact us directly.");
+  }
+});
+</script>
 </body>
 </html>
