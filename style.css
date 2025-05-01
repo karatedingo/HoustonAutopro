@@ -931,3 +931,42 @@ input, select {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.thank-you-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: white;
+}
+
+.thank-you-card {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--light-gray);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.thank-you-icon {
+  font-size: 4rem;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.outline-button {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+}
+
+.outline-button:hover {
+  background: var(--accent-color);
+  color: white;
+}
