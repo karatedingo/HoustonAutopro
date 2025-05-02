@@ -153,17 +153,6 @@ document.getElementById('preApprovalForm').addEventListener('submit', function(e
     },
     body: formData
   })
-  .then(response => {
-    if (response.ok) {
-      alert("Thanks! A representative will contact you shortly to discuss your pre-approval options.");
-      form.reset();
-    } else {
-      throw new Error('Submission failed');
-    }
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('Failed to submit. Please try again or call (832) 708-4243');
   })
   .finally(() => {
     submitBtn.disabled = false;
