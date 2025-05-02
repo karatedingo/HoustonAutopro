@@ -146,7 +146,7 @@ document.getElementById('preApprovalForm').addEventListener('submit', function(e
   // Prepare form data
   const formData = new URLSearchParams(new FormData(form));
   
-  fetch('YOUR_SCRIPT_URL', {
+  fetch('https://script.google.com/macros/s/AKfycbyiSdSqHf7PAtFnR7QMzHwo-JhAEDdRh8S0elHxRb2iI7BcLx59kO4e5BajqB5vaPJC/exec', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
