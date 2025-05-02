@@ -133,13 +133,43 @@
   </div>
 </footer>
 
-  <script>
-    // Simple form handler (would connect to your CRM in production)
-    document.getElementById('preApprovalForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+<script>
+document.getElementById('preApprovalForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  
+  // Disable button during submission
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Processing...';
+  
+  // Prepare form data
+  const formData = new URLSearchParams(new FormData(form));
+  
+  fetch('YOUR_SCRIPT_URL', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: formData
+  })
+  .then(response => {
+    if (response.ok) {
       alert("Thanks! A representative will contact you shortly to discuss your pre-approval options.");
-      this.reset();
-    });
-  </script>
+      form.reset();
+    } else {
+      throw new Error('Submission failed');
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Failed to submit. Please try again or call (832) 708-4243');
+  })
+  .finally(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Get My Pre-Approval';
+  });
+});
+</script>
 </body>
 </html>
