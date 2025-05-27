@@ -971,7 +971,7 @@ input, select {
   background: var(--accent-color);
   color: white;
 }
-/* Sell Your Car Page
+/* Sell Your Car Page */
 .trade-hero {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
               url('images/pre-approval-hero.jpg') center/cover;
