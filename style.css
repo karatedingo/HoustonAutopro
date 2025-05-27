@@ -971,3 +971,193 @@ input, select {
   background: var(--accent-color);
   color: white;
 }
+/* Sell Your Car Page Styles */
+.sell-hero {
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+              url('images/pre-approval-hero.jpg') center/cover;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.sell-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.sell-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Sell Process Section */
+.sell-process {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.process-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.step {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--light-gray);
+  transition: transform 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-5px);
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.step h3 {
+  color: var(--dark-gray);
+  margin-bottom: 1rem;
+}
+
+/* Sell Form Section */
+.sell-form-section {
+  padding: 4rem 2rem;
+  background: var(--light-gray);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.form-intro {
+  padding: 2rem;
+  background: var(--accent-color);
+  color: white;
+  text-align: center;
+}
+
+.form-intro h2 {
+  margin-bottom: 0.5rem;
+}
+
+.sell-form {
+  padding: 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--dark-gray);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input {
+  width: auto;
+}
+
+.submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.submit-btn:hover {
+  background-color: #3a5a8c;
+}
+
+/* Why Sell Section */
+.why-sell {
+  padding: 4rem 2rem;
+  background: white;
+  text-align: center;
+}
+
+.why-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.benefit {
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: var(--light-gray);
+}
+
+.benefit i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.benefit h3 {
+  color: var(--dark-gray);
+  margin-bottom: 0.5rem;
+}
