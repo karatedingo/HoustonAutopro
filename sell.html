@@ -25,59 +25,29 @@
         <a href="sell.html" class="nav-button active">Sell Your Car</a>
         <a href="happy-customers.html" class="nav-button">Happy Customers</a>
         <a href="contact.html" class="nav-button">Contact Us</a>
-        
       </nav>
     </div>
   </header>
 
   <main>
     <!-- Hero Section -->
-    <section class="sell-hero">
+    <section class="trade-hero">
       <div class="hero-content">
         <h2>Sell Your Car Fast & Easy</h2>
         <p>Get a fair cash offer in minutes - no obligations, no hassle</p>
       </div>
     </section>
 
-    <!-- Sell Process -->
-    <section class="sell-process">
-      <div class="process-content">
-        <h2>Our Simple Selling Process</h2>
-        <div class="process-steps">
-          <div class="step">
-            <div class="step-icon">
-              <i class="fas fa-car"></i>
-            </div>
-            <h3>1. Tell Us About Your Car</h3>
-            <p>Fill out our simple form with details about your vehicle's make, model, year, and condition.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <i class="fas fa-dollar-sign"></i>
-            </div>
-            <h3>2. Get a Fair Offer</h3>
-            <p>We'll analyze market data and provide you with a competitive cash offer within minutes.</p>
-          </div>
-          <div class="step">
-            <div class="step-icon">
-              <i class="fas fa-handshake"></i>
-            </div>
-            <h3>3. Accept & Get Paid</h3>
-            <p>If you accept our offer, we'll handle all paperwork and pay you on the spot.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Sell Form -->
-    <section class="sell-form-section">
+    <section class="trade-form-section">
       <div class="form-container">
         <div class="form-intro">
           <h2>Get Your Instant Offer</h2>
-          <p>Complete this form to receive your no-obligation cash offer. We'll contact you within 30 minutes.</p>
+          <p>Complete this form to receive your no-obligation cash offer</p>
         </div>
         
-        <form class="sell-form">
+        <form class="trade-form">
+          <h3>Your Information</h3>
           <div class="form-grid">
             <div class="form-group">
               <label for="first-name">First Name*</label>
@@ -95,13 +65,16 @@
               <label for="phone">Phone*</label>
               <input type="tel" id="phone" name="phone" required>
             </div>
-            
+          </div>
+
+          <h3>Vehicle Information</h3>
+          <div class="form-grid">
             <div class="form-group">
-              <label for="make">Vehicle Make*</label>
+              <label for="make">Make*</label>
               <input type="text" id="make" name="make" required>
             </div>
             <div class="form-group">
-              <label for="model">Vehicle Model*</label>
+              <label for="model">Model*</label>
               <input type="text" id="model" name="model" required>
             </div>
             <div class="form-group">
@@ -112,61 +85,64 @@
               <label for="mileage">Mileage*</label>
               <input type="number" id="mileage" name="mileage" required>
             </div>
-            
+          </div>
+
+          <div class="form-grid">
             <div class="form-group">
-              <label for="condition">Vehicle Condition*</label>
+              <label for="condition">Condition*</label>
               <select id="condition" name="condition" required>
                 <option value="">Select condition</option>
-                <option value="excellent">Excellent - Like new</option>
-                <option value="good">Good - Minor wear</option>
-                <option value="fair">Fair - Some issues</option>
-                <option value="poor">Poor - Needs work</option>
+                <option value="excellent">Excellent</option>
+                <option value="good">Good</option>
+                <option value="fair">Fair</option>
+                <option value="poor">Poor</option>
               </select>
-            </div> <div class="form-group">
-              <label for="mileage">Vin Number*</label>
+            </div>
+            <div class="form-group">
+              <label for="vin">VIN</label>
               <input type="text" id="vin" name="vin" required>
             </div>
-            
-            
-            <div class="form-group full-width">
-              <label for="notes">Additional Notes</label>
-              <textarea id="notes" name="notes" rows="3" placeholder="Any additional details about your vehicle..."></textarea>
-            </div>
-            
-            <button type="submit" class="submit-btn">Get My Instant Offer</button>
           </div>
+
+          <div class="form-group">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any additional details about your vehicle..."></textarea>
+          </div>
+
+
+          <button type="submit" class="submit-btn">Get My Instant Offer</button>
         </form>
       </div>
     </section>
 
-    <!-- Why Sell To Us -->
-    <section class="why-sell">
-      <div class="why-content">
-        <h2>Why Sell Your Car to Houston Auto Pro?</h2>
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="benefits-content">
+        <h2>Why Sell to Houston Auto Pro?</h2>
         <div class="benefits-grid">
-          <div class="benefit">
+          <div class="benefit-card">
             <i class="fas fa-bolt"></i>
             <h3>Fast Offers</h3>
-            <p>Get a cash offer in minutes, not days. No waiting around for potential buyers.</p>
+            <p>Get a cash offer in minutes, not days.</p>
           </div>
-          <div class="benefit">
+          <div class="benefit-card">
             <i class="fas fa-hand-holding-usd"></i>
-            <h3>Competitive Prices</h3>
-            <p>We pay fair market value based on current Houston area pricing.</p>
+            <h3>Fair Prices</h3>
+            <p>We pay competitive market value.</p>
           </div>
-          <div class="benefit">
+          <div class="benefit-card">
             <i class="fas fa-file-signature"></i>
             <h3>Hassle-Free</h3>
-            <p>We handle all the paperwork - no need to worry about title transfers.</p>
+            <p>We handle all paperwork.</p>
           </div>
-          <div class="benefit">
+          <div class="benefit-card">
             <i class="fas fa-coins"></i>
-            <h3>Cash in Hand</h3>
-            <p>Get paid on the spot when you accept our offer - no waiting for checks to clear.</p>
+            <h3>Cash Payment</h3>
+            <p>Get paid on the spot.</p>
           </div>
         </div>
       </div>
-   
+    </section>
   </main>
 
   <!-- Same footer as other pages -->
