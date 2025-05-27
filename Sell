@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Car | Houston Auto Pro</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Get the best value for your car when you sell to Houston Auto Pro. Fast, fair offers and hassle-free process.">
+</head>
+<body>
+  <!-- Same header as other pages -->
+  <header class="top-banner">
+    <div class="banner-content">
+      <div class="logo-container">
+        <a href="index.html" class="home-link">
+        <img src="HAPLogo.jpeg" alt="Houston Car Pro Logo" class="site-logo">
+          <h1 class="logo">Houston Auto Pro</h1>
+        </a>
+      </div>
+      <nav class="nav-buttons">
+        <a href="inventory.html" class="nav-button">Inventory</a>
+        <a href="pre-approval.html" class="nav-button">Pre-Approval</a>
+        <a href="trade.html" class="nav-button">Trade</a>
+        <a href="sell-your-car.html" class="nav-button active">Sell Your Car</a>
+        <a href="happy-customers.html" class="nav-button">Happy Customers</a>
+        <a href="contact.html" class="nav-button">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="sell-hero">
+      <div class="hero-content">
+        <h2>Sell Your Car Fast & Easy</h2>
+        <p>Get a fair cash offer in minutes - no obligations, no hassle</p>
+      </div>
+    </section>
+
+    <!-- Sell Process -->
+    <section class="sell-process">
+      <div class="process-content">
+        <h2>Our Simple Selling Process</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <h3>1. Tell Us About Your Car</h3>
+            <p>Fill out our simple form with details about your vehicle's make, model, year, and condition.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h3>2. Get a Fair Offer</h3>
+            <p>We'll analyze market data and provide you with a competitive cash offer within minutes.</p>
+          </div>
+          <div class="step">
+            <div class="step-icon">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>3. Accept & Get Paid</h3>
+            <p>If you accept our offer, we'll handle all paperwork and pay you on the spot.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sell Form -->
+    <section class="sell-form-section">
+      <div class="form-container">
+        <div class="form-intro">
+          <h2>Get Your Instant Offer</h2>
+          <p>Complete this form to receive your no-obligation cash offer. We'll contact you within 30 minutes.</p>
+        </div>
+        
+        <form class="sell-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="first-name">First Name*</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group">
+              <label for="last-name">Last Name*</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone*</label>
+              <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="make">Vehicle Make*</label>
+              <input type="text" id="make" name="make" required>
+            </div>
+            <div class="form-group">
+              <label for="model">Vehicle Model*</label>
+              <input type="text" id="model" name="model" required>
+            </div>
+            <div class="form-group">
+              <label for="year">Year*</label>
+              <input type="number" id="year" name="year" min="1980" max="2025" required>
+            </div>
+            <div class="form-group">
+              <label for="mileage">Mileage*</label>
+              <input type="number" id="mileage" name="mileage" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="condition">Vehicle Condition*</label>
+              <select id="condition" name="condition" required>
+                <option value="">Select condition</option>
+                <option value="excellent">Excellent - Like new</option>
+                <option value="good">Good - Minor wear</option>
+                <option value="fair">Fair - Some issues</option>
+                <option value="poor">Poor - Needs work</option>
+              </select>
+            </div>
+            
+            <div class="form-group full-width">
+              <label for="notes">Additional Notes</label>
+              <textarea id="notes" name="notes" rows="3" placeholder="Any additional details about your vehicle..."></textarea>
+            </div>
+            
+            <div class="form-group full-width checkbox-group">
+              <input type="checkbox" id="best-contact" name="best-contact">
+              <label for="best-contact">Phone call is the best way to contact me</label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Get My Instant Offer</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Why Sell To Us -->
+    <section class="why-sell">
+      <div class="why-content">
+        <h2>Why Sell Your Car to Houston Auto Pro?</h2>
+        <div class="benefits-grid">
+          <div class="benefit">
+            <i class="fas fa-bolt"></i>
+            <h3>Fast Offers</h3>
+            <p>Get a cash offer in minutes, not days. No waiting around for potential buyers.</p>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-hand-holding-usd"></i>
+            <h3>Competitive Prices</h3>
+            <p>We pay fair market value based on current Houston area pricing.</p>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-file-signature"></i>
+            <h3>Hassle-Free</h3>
+            <p>We handle all the paperwork - no need to worry about title transfers.</p>
+          </div>
+          <div class="benefit">
+            <i class="fas fa-coins"></i>
+            <h3>Cash in Hand</h3>
+            <p>Get paid on the spot when you accept our offer - no waiting for checks to clear.</p>
+          </div>
+        </div>
+      </div>
+   
+  </main>
+
+  <!-- Same footer as other pages -->
+  <footer class="bottom-banner">
+    <div class="footer-content">
+      <div class="contact-info">
+        <h3>How to Reach Me</h3>
+        <p><i class="fas fa-phone"></i> (832) 708-4243</p>
+        <p><i class="fas fa-envelope"></i> Allan.t.Shawn@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 10333 Katy Fwy, Houston, TX 77024</p>
+      </div>
+      <div class="social-media">
+        <h3>Follow Us</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/TheHoustonAutoPro/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/HoustonAutoPro" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@HoustonAutoPro" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2023 Simple Salesman. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
