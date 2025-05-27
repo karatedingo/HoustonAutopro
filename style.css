@@ -405,9 +405,18 @@ body {
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
               url('images/pre-approval-hero.jpg') center/cover;
   color: white;
-  padding: 4rem 4rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
+
+.trade-hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.trade-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
 
 .trade-form {
   max-width: 700px;
