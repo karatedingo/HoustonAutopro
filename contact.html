@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Houston Auto Pro</title>
- <meta name="description" content="Houston Auto Pro: Stress-free car buying. Contact us for new & used cars, trucks, and SUVs in Houston. Fast credit approval, trade-in deals, and no-pressure sales.">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Houston Auto Pro: Stress-free car buying. Contact us for new & used cars, trucks, and SUVs in Houston. Fast credit approval, trade-in deals, and no-pressure sales." />
   <link rel="canonical" href="https://www.houstonautopro.com/contact.html" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-  <!-- Open Graph / Facebook Meta Tags (Controls Facebook Sharing) -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.houstonautopro.com/contact.html">
-  <meta property="og:title" content="Contact Us | Houston Auto Pro">
-  <meta property="og:description" content="Get in touch with Houston Auto Pro for the best car deals in Houston. Fast responses, no-pressure sales.">
-  <meta property="og:image" content="https://www.houstonautopro.com/HAPLogo.jpeg">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; frame-src https://www.youtube.com;">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- Open Graph / Facebook Meta Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.houstonautopro.com/contact.html" />
+  <meta property="og:title" content="Contact Us | Houston Auto Pro" />
+  <meta property="og:description" content="Get in touch with Houston Auto Pro for the best car deals in Houston. Fast responses, no-pressure sales." />
+  <meta property="og:image" content="https://www.houstonautopro.com/HAPLogo.jpeg" />
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; frame-src https://www.youtube.com;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
 </head>
 <body>
-  <!-- PASTE YOUR EXISTING HEADER HERE (WITH NAV BUTTONS) -->
+
 <header class="top-banner">
   <div class="banner-content">
     <div class="logo-container">
       <a href="index.html" class="home-link">
-        <img src="HAPLogo.jpeg" alt="Houston Car Pro Logo" class="site-logo">
+        <img src="HAPLogo.jpeg" alt="Houston Car Pro Logo" class="site-logo" />
         <h1 class="logo">Houston Auto Pro</h1>
       </a>
     </div>
@@ -36,72 +43,72 @@
       <a href="sell.html" class="nav-button">Sell Your Car</a>
       <a href="happy-customers.html" class="nav-button">Happy Customers</a>
       <a href="contact.html" class="nav-button active">Contact Us</a>
-      </nav>
-    </div>
-  </header>
+    </nav>
+  </div>
+</header>
 
-  <!-- NEW CONTACT PAGE CONTENT (STARTS HERE) -->
-  <main class="contact-page">
-    <section class="contact-hero">
-      <h2>Get in Touch</h2>
-      <p>Ready to find your perfect vehicle? Fill out the form below and we'll contact you within 24 hours.</p>
-    </section>
+<main class="contact-page">
+  <section class="contact-hero">
+    <h2>Get in Touch</h2>
+    <p>Ready to find your perfect vehicle? Fill out the form below and we'll contact you within 24 hours.</p>
+  </section>
 
-<div class="contact-container">
-<form class="contact-form" 
-      action="https://script.google.com/macros/s/AKfycbxXlPZih_eIZT_jy5zTm1frFcjiIHCPXHYr98Y8aGP2uwPG4I_ijLgsmvIxn9vaUFGq/exec" 
+  <div class="contact-container">
+    <form class="contact-form"
+      id="contactForm"
+      action="https://script.google.com/macros/s/AKfycbxXlPZih_eIZT_jy5zTm1frFcjiIHCPXHYr98Y8aGP2uwPG4I_ijLgsmvIxn9vaUFGq/exec"
       method="POST"
       onsubmit="setTimeout(function(){ window.location.href='https://houstonautopro.com/thank-you.html'; }, 1000); return true;">
+      
+      <div class="form-group">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="name" required />
+      </div>
 
-          <div class="form-group">
-          <label for="name">Full Name*</label>
-          <input type="text" id="name" name="name" required>
-        </div>
+      <div class="form-group">
+        <label for="phone">Phone Number*</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
 
-        <div class="form-group">
-          <label for="phone">Phone Number*</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
+      <div class="form-group">
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" required />
+      </div>
 
-        <div class="form-group">
-          <label for="email">Email*</label>
-          <input type="email" id="email" name="email" required>
-        </div>
+      <div class="form-group">
+        <label for="vehicle">Desired Vehicle (Optional)</label>
+        <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2023 Ford F-150" />
+      </div>
 
-        <div class="form-group">
-          <label for="vehicle">Desired Vehicle (Optional)</label>
-          <input type="text" id="vehicle" name="vehicle" placeholder="e.g. 2023 Ford F-150">
-        </div>
+      <div class="form-group">
+        <label for="comments">Comments/Questions</label>
+        <textarea id="comments" name="comments" rows="4"></textarea>
+      </div>
 
-        <div class="form-group">
-          <label for="comments">Comments/Questions</label>
-          <textarea id="comments" name="comments" rows="4"></textarea>
-        </div>
+      <button type="submit" class="submit-btn">Submit Inquiry</button>
+    </form>
 
-        <button type="submit" class="submit-btn">Submit Inquiry</button>
-      </form>
+    <div class="contact-info">
+      <h3>Other Ways to Reach Us</h3>
+      <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (832) 708-4243</p>
+      <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Allan.T.Shawn@gmail.com</p>
 
-      <div class="contact-info">
-        <h3>Other Ways to Reach Us</h3>
-        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (832) 708-4243</p>
-        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> Allan.T.Shawn@gmail.com</p>
-        
-        <div class="business-hours">
-          <h4>Business Hours</h4>
-          <p>Monday-Friday: 9AM - 7PM</p>
-          <p>Saturday: 10AM - 5PM</p>
-          <p>Sunday: Closed</p>
-        </div>
+      <div class="business-hours">
+        <h4>Business Hours</h4>
+        <p>Monday-Friday: 9AM - 7PM</p>
+        <p>Saturday: 10AM - 5PM</p>
+        <p>Sunday: Closed</p>
       </div>
     </div>
-  </main>
+  </div>
+</main>
 
 <footer class="bottom-banner">
   <div class="footer-content">
     <div class="contact-info">
       <h3>How to Reach Me</h3>
       <p><i class="fas fa-phone"></i> (832) 708-4243</p>
-      <p><i class="fas fa-envelope"></i> Allan.t.Shawn@gmail.com</p>
+      <p><i class="fas fa-envelope"></i> Allan.T.Shawn@gmail.com</p>
     </div>
     <div class="social-media">
       <h3>Follow Us</h3>
@@ -117,40 +124,29 @@
   </div>
 </footer>
 
-  <script>
-    // Simple form handler (would connect to your CRM in production)
-    document.getElementById('preApprovalForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("Thanks! A representative will contact you shortly to discuss your pre-approval options.");
-      this.reset();
-    });
-  </script>
-  <script>
-document.getElementById('contactForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  
-  try {
-    const formData = new URLSearchParams(new FormData(this));
+<!-- JS Scripts -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
     
-    const response = await fetch('https://script.google.com/macros/s/AKfycbyfol2KjVY6v6otgcRCM0DGU8V4pqiln9prqHQ36S1tlnyl0GtC2cGW5SxNUnpMDSk4/exec', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
-      },
-      body: formData
-    });
-    
-    if (!response.ok) throw new Error('Server error');
-    
-    const result = await response.json();
-    console.log("Submission result:", result);
-    window.location.href = 'https://houstonautopro.com/thank-you.html';
-    
-  } catch(error) {
-    console.error("Submission error:", error);
-    alert("Failed to submit form. Please try again or contact us directly.");
-  }
-});
+    try {
+      const formData = new URLSearchParams(new FormData(this));
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyfol2KjVY6v6otgcRCM0DGU8V4pqiln9prqHQ36S1tlnyl0GtC2cGW5SxNUnpMDSk4/exec', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData
+      });
+
+      if (!response.ok) throw new Error('Server error');
+      const result = await response.json();
+      console.log("Submission result:", result);
+      window.location.href = 'https://houstonautopro.com/thank-you.html';
+    } catch(error) {
+      console.error("Submission error:", error);
+      alert("Failed to submit form. Please try again or contact us directly.");
+    }
+  });
 </script>
+
 </body>
 </html>
