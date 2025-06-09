@@ -172,5 +172,58 @@
       <p>&copy; 2023 Simple Salesman. All rights reserved.</p>
     </div>
   </footer>
+  <script>
+  document.querySelector('.trade-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get the form element
+    const form = e.target;
+    
+    // Show loading state
+    const submitBtn = form.querySelector('.submit-btn');
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Processing...';
+    
+    // Collect form data
+    const formData = new FormData(form);
+    
+    // Send data to Google Apps Script
+    fetch('https://script.google.com/macros/s/AKfycbxXlPZih_eIZT_jy5zTm1frFcjiIHCPXHYr98Y8aGP2uwPG4I_ijLgsmvIxn9vaUFGq/exec', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .then(data => {
+      if (data.status === 'success') {
+        // Success message
+        form.innerHTML = `
+          <div class="success-message">
+            <h3>Thank You!</h3>
+            <p>Your submission has been received. We'll contact you shortly with your offer.</p>
+            <p><i class="fas fa-check-circle"></i></p>
+          </div>
+        `;
+      } else {
+        throw new Error(data.message || 'Unknown error occurred');
+      }
+    })
+    .catch(error => {
+      // Error message
+      form.innerHTML = `
+        <div class="error-message">
+          <h3>Submission Error</h3>
+          <p>${error.message}</p>
+          <p>Please try again or contact us directly.</p>
+          <button onclick="window.location.reload()">Try Again</button>
+        </div>
+      `;
+    });
+  });
+</script>
 </body>
 </html>
